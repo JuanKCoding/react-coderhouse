@@ -1,20 +1,19 @@
-import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
-//Importacion de estilos de bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import NavBarComponent from './components/NavBarComponent/NavBarComponent'
+import { useGetProducts } from './hooks/useProducts';
 
 
 const App = () => {
 
-  return (
-    <div style={{width: '100vw', height: '100vh'}}>
-      <NavBarComponent/>
-      <ItemListContainer greeting= "Bienvenidos a la JStore"/>
-    </div>
-)
+  const { productsData } = useGetProducts();
 
-}
+  return (
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <NavBarComponent />
+      <ItemListContainer productsData={productsData}/>
+    </div>
+  );
+};
 
 export default App;
