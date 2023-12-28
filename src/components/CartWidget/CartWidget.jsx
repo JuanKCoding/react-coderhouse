@@ -1,6 +1,9 @@
 const CartWidget = () => {
     return (
-    <div>🛒 0</div>
+    <div className='cartWidgetContainer'>
+        🛒
+        <span style={{fontWeight: 'bold', fontSize:'1.3rem'}}>0</span>
+    </div>
     )
 }
 

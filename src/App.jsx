@@ -1,17 +1,11 @@
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarComponent from './components/NavBarComponent/NavBarComponent'
-import { useGetProducts } from './hooks/useProducts';
-
+import { MainRouter } from './router/MainRouter';
 
 const App = () => {
 
-  const { productsData } = useGetProducts();
-
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
-      <NavBarComponent />
-      <ItemListContainer productsData={productsData}/>
+      <MainRouter/>
     </div>
   );
 };
