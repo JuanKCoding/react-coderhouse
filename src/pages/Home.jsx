@@ -1,17 +1,13 @@
-import { useEffect } from 'react'
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
-import { useGetProducts } from "../hooks/useProducts"
-
+import { useEffect } from "react";
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import { useGetProducts } from "../hooks/useProducts";
 
 export const Home = () => {
+  useEffect(() => {
+    document.title = "JSTORE | Home ";
+  });
 
-    useEffect(() =>{
-        document.title = "JSTORE | Home ";
-    })
+  const { productsData } = useGetProducts("products");
 
-    const { productsData } = useGetProducts (15);
-
-    return (
-        <ItemListContainer productsData={productsData}/>
-    )
-}
+  return <ItemListContainer productsData={productsData} />;
+};

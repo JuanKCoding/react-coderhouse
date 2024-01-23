@@ -6,10 +6,11 @@ import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import { useCategory } from '../../hooks/useCategory';
 
-
 const NavBarComponent = () => {
 
     const {category} = useCategory();
+
+    
     
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -18,7 +19,6 @@ const NavBarComponent = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="#link">Link</Nav.Link>
                 <NavDropdown title="Categorias" id="basic-nav-dropdown">
                     {category.map((item, index) => {
                         return ( 
@@ -30,7 +30,10 @@ const NavBarComponent = () => {
                 </NavDropdown>
             </Nav>
             </Navbar.Collapse>
-            <CartWidget></CartWidget>
+
+            <Link to='/create-product'>Crear Producto Nuevo</Link>
+
+            <CartWidget/>
         </Container>
         </Navbar>
     );

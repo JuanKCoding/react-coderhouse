@@ -1,9 +1,9 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 
 const ItemListContainer = ({ productsData }) => {
+
     return (
             <div style={{width: '100vw', height: '100vh', display: 'flex', flexWrap: 'wrap'}}>
                 {productsData.map((products) => {
@@ -16,7 +16,6 @@ const ItemListContainer = ({ productsData }) => {
                                 {products.description}
                                 </Card.Text>
                                 <div>{products.price}</div>
-                                <Button variant="primary">Mas detalles</Button>
                             </Card.Body>
                         </Card>
                     );
