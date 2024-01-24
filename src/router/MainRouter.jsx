@@ -4,6 +4,7 @@ import NavBarComponent from "../components/NavBarComponent/NavBarComponent"
 import { ItemDetailContainer } from "../pages/ItemDetailContainer"
 import { Category } from "../pages/Category"
 import { CreateProduct } from "../pages/CreateProduct"
+import { Cart } from "../pages/Cart"
 
 
 export const MainRouter = () => {
@@ -15,6 +16,7 @@ export const MainRouter = () => {
                 <Route path='/item/:id' element={<ItemDetailContainer />}/>
                 <Route path='/category/:id' element={<Category />}/>
                 <Route path='/create-product' element={<CreateProduct />}/>
+                <Route path='/cart' element={<Cart />}/>
             </Routes>
         </BrowserRouter>
     )

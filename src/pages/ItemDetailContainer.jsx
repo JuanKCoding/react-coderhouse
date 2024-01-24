@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import { useGetProductById } from '../hooks/useProducts';
 import { useParams } from 'react-router-dom';
-import { ItemCount } from '../components/ItemCount/ItemCount';
+import { ItemCount } from '../components/ItemCount/ItemCount.jsx';
 
 
 export const ItemDetailContainer = () => {
